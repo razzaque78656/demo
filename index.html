@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A personal portfolio showcasing selected projects and skills.">
+	<title>Alex Morgan — Portfolio</title>
+	<style>
+		:root {
+			color-scheme: light;
+			--ink: #17201d;
+			--muted: #65716c;
+			--accent: #287b63;
+			--paper: #f7f8f5;
+			--line: #e2e8e3;
+		}
+		* { box-sizing: border-box; }
+		html { scroll-behavior: smooth; }
+		body {
+			margin: 0;
+			background: var(--paper);
+			color: var(--ink);
+			font: 16px/1.6 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+		}
+		a { color: inherit; }
+		.wrap { width: min(1080px, calc(100% - 40px)); margin: 0 auto; }
+		header { padding: 24px 0; }
+		nav { display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+		.brand { font-weight: 750; letter-spacing: -.04em; font-size: 1.15rem; text-decoration: none; }
+		.nav-links { display: flex; gap: 26px; }
+		.nav-links a { color: var(--muted); text-decoration: none; font-size: .94rem; }
+		.nav-links a:hover, .text-link:hover { color: var(--accent); }
+		.hero { padding: 100px 0 110px; max-width: 760px; }
+		.eyebrow { color: var(--accent); font-weight: 700; font-size: .82rem; letter-spacing: .13em; text-transform: uppercase; }
+		h1 { margin: 14px 0 18px; font-size: clamp(2.8rem, 8vw, 5.5rem); line-height: 1.02; letter-spacing: -.065em; }
+		.hero p { max-width: 610px; margin: 0; color: var(--muted); font-size: 1.16rem; }
+		.button { display: inline-block; margin-top: 30px; padding: 12px 19px; border-radius: 7px; background: var(--ink); color: white; text-decoration: none; font-weight: 650; }
+		.button:hover { background: var(--accent); }
+		section { padding: 64px 0; border-top: 1px solid var(--line); }
+		.section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; margin-bottom: 30px; }
+		h2 { margin: 0; font-size: 1.75rem; letter-spacing: -.04em; }
+		.section-note { margin: 0; color: var(--muted); }
+		.projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+		.project { padding: 27px; background: #fff; border: 1px solid var(--line); border-radius: 12px; }
+		.project h3 { margin: 0 0 9px; font-size: 1.15rem; }
+		.project p { margin: 0 0 18px; color: var(--muted); }
+		.tag { display: inline-block; margin: 0 6px 6px 0; padding: 4px 9px; border-radius: 20px; background: #edf4ef; color: #35634f; font-size: .78rem; }
+		.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+		.about-grid p { margin: 0; color: var(--muted); }
+		.skills { display: flex; flex-wrap: wrap; gap: 9px; align-content: start; }
+		.skills span { padding: 8px 12px; border: 1px solid var(--line); border-radius: 6px; background: #fff; font-size: .9rem; }
+		.contact { padding-bottom: 82px; }
+		.contact p { color: var(--muted); }
+		.text-link { color: var(--accent); font-weight: 650; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+		footer { padding: 22px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .88rem; }
+		@media (max-width: 640px) {
+			.wrap { width: min(100% - 32px, 1080px); }
+			.nav-links { gap: 14px; }
+			.nav-links a { font-size: .85rem; }
+			.hero { padding: 76px 0 82px; }
+			.projects, .about-grid { grid-template-columns: 1fr; }
+			.about-grid { gap: 26px; }
+			.section-heading { display: block; }
+			.section-note { margin-top: 6px; }
+		}
+	</style>
+</head>
+<body>
+	<header class="wrap">
+		<nav aria-label="Main navigation">
+			<a class="brand" href="#home">Alex Morgan</a>
+			<div class="nav-links">
+				<a href="#work">Work</a>
+				<a href="#about">About</a>
+				<a href="#contact">Contact</a>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<div class="wrap">
+			<section class="hero" id="home" style="border-top: 0;">
+				<span class="eyebrow">Designer &amp; developer</span>
+				<h1>Thoughtful digital experiences, made simple.</h1>
+				<p>Hi, I’m Alex. I build clean, accessible websites and useful products that help people get things done.</p>
+				<a class="button" href="#work">Explore my work</a>
+			</section>
+
+			<section id="work">
+				<div class="section-heading">
+					<h2>Selected work</h2>
+					<p class="section-note">A few things I’ve been working on.</p>
+				</div>
+				<div class="projects">
+					<article class="project">
+						<h3>Northstar — Personal finance</h3>
+						<p>A friendly budgeting dashboard that makes everyday spending easier to understand.</p>
+						<span class="tag">Product design</span><span class="tag">Web app</span>
+					</article>
+					<article class="project">
+						<h3>Fieldnotes — Creative journal</h3>
+						<p>A calm, responsive space for collecting ideas, observations, and inspiration.</p>
+						<span class="tag">UX/UI</span><span class="tag">Frontend</span>
+					</article>
+					<article class="project">
+						<h3>Good Roots — Community garden</h3>
+						<p>A simple site helping neighbors discover local gardens and get involved.</p>
+						<span class="tag">Visual design</span><span class="tag">Accessibility</span>
+					</article>
+					<article class="project">
+						<h3>Studio Mono — Portfolio refresh</h3>
+						<p>A flexible portfolio experience for an independent creative studio.</p>
+						<span class="tag">Art direction</span><span class="tag">Development</span>
+					</article>
+				</div>
+			</section>
+
+			<section id="about">
+				<div class="section-heading">
+					<h2>A little about me</h2>
+				</div>
+				<div class="about-grid">
+					<p>I’m a curious designer and developer who enjoys turning complex problems into clear, welcoming experiences. I care about thoughtful details, accessible design, and working well with others. When I’m away from my desk, I’m usually out walking or trying a new recipe.</p>
+					<div class="skills" aria-label="Skills">
+						<span>UI/UX Design</span><span>HTML &amp; CSS</span><span>JavaScript</span>
+						<span>Prototyping</span><span>Accessibility</span><span>Responsive design</span>
+					</div>
+				</div>
+			</section>
+
+			<section class="contact" id="contact">
+				<span class="eyebrow">Have a project in mind?</span>
+				<h2>Let’s make something meaningful.</h2>
+				<p>I’m open to interesting projects and new collaborations.</p>
+				<a class="text-link" href="mailto:hello@example.com">hello@example.com →</a>
+			</section>
+		</div>
+	</main>
+
+	<footer>
+		<div class="wrap">© 2025 Alex Morgan. Built with care.</div>
+	</footer>
+</body>
+</html>
